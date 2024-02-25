@@ -41,13 +41,13 @@ const Main = () => {
     <div className="main-container">
       {!account && (
         <button className="connect-wallet-button" onClick={connectWallet}>
-          Poveži se sa MetaMaskom
+          Connect to MetaMask
         </button>
       )}
       
       <AuctionList className="auction-list" web3={web3} account={account} auctionFactoryAddress={auctionFactoryAddress}/>
       <button className="create-auction-button" onClick={() => setShowCreateModal(true)}>
-        Napravi Aukciju
+        Create an Auction
       </button>
       {showCreateModal && (
         <CreateAuctionModal className="create-auction-modal" web3={web3} account={account} onClose={() => setShowCreateModal(false)} auctionFactoryAddress = {auctionFactoryAddress}/>

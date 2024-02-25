@@ -36,7 +36,7 @@ const AuctionList = ({ web3, account, auctionFactoryAddress }) => {
 <h1 className="auction-list-title">Auction Dapp</h1>
       {auctions.map((auction, index) => (
         <div key={index} className="auction-item" onClick={() => openDetailsModal(auction)}>
-          Aukcija {index + 1}
+          Auction {index + 1}
         </div>
       ))}
       {selectedAuction && <AuctionDetailsModal web3={web3} account={account} auction={selectedAuction} onClose={() => setSelectedAuction(null)} />}
